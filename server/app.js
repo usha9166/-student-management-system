@@ -17,7 +17,11 @@ const __dirname = path.dirname(__filename);
 const app = express();
 
 app.use(cors({
-  origin: [process.env.FRONTED_URL],
+  origin: [
+    process.env.FRONTED_URL,
+    "https://student-management-system-khaki-iota.vercel.app",
+    "https://student-management-system-pzwtg7ybh-ushas-projects-52063d81.vercel.app"
+  ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 }));
